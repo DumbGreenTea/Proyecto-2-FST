@@ -1,0 +1,64 @@
+---
+title: "Readme"
+author: "Diego Leiva"
+date: "2025-06-15"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Proyecto 2
+**Curso**: Fundamentos de series temporales
+
+Este es un pequeño documento en donde anotaré observaciones e información relevante sobre la base de datos y su posterior análisis.
+
+## Descripción de la base de datos elegida
+La base de datos que se eligió para este proyecto corresponde a "Souvenir Sales Analysis (Updating)" publicado por "Mandy HP Nguyen" en la página web "https://rpubs.com/mandyhpnguyen/ts_souvenirsales", la cual realmente lo que nos muestra es una base de datos/serie temporal utilizada normalmente para aplicar y demostrar técnicas de análisis de series temporales. Esta se encuentra disponible en varios paquetes de análisis de datos, y recopila las ventas mensuales de souvenirs de una tienda desde enero de 1995 hasta diciembre de 2001, con un total de 84 observaciones.
+
+El souvenir es un producto con una demanda altamente estacional y dependiente de factores externos como el turismo y las festividades. Comprender el comportamiento y los patrones en las ventas de souvenirs es crucial para mejorar la planificación de inventarios, optimizar las estrategias de marketing y maximizar las ganancias. (Nguyen, 2021)
+
+
+## Preguntas 
+1. Tarea dejada en la clase 7, slide 4
+
+2. Realice un análisis exploratorio de la serie presentada. Comente sobre la tendencia y/o periodicidad de ésta. Justifique su respuesta.
+
+3. Comente sobre la estacionaridad de la serie, basándose en resultados gráficos y test que podría aplicar. De ser necesario, realice las transformaciones necesarias, para que la serie temporal empleada sea estacionaria. Justifique la elección de las transformaciones empleadas.
+
+4. Proponga dos posibles modelos ARM A(p, q), indicando sus respectivos órdenes y justificando la elección. Se prohibe el uso de la función auto.arima() de R ´ o su equivalente en Python.
+
+5. Ajuste los modelos y realice un análisis de los residuos de su modelo, comente los resultados obtenidos
+
+6. De acuerdo a los métodos de selección de modelos, escoja el modelo más adecuado.
+
+7. [Investigación 1:] Usando como máximo 2 hojas, defina los modelos GARCH y de Volatilidad estocástica (Stochastich Volatiluty - SV), destacando sus principales usos y diferencias con los modelos estudiados. Explique y defina, de ser posible, su ACF y PACF, y cómo es la estimación de los parámetros involucrados.
+
+8. [Investigación 2:] Usando como máximo 2 hojas, defina la relación entre los procesos ARFIMA(p, d, q) y los procesos de larga memoria. Defina además la relación del parámetro d con el parámetro de Hurst H. Entregue y explique las principales características de los procesos de larga memoria y cómo se estima el parámetro de larga memoria H.
+
+
+
+
+
+
+===============================================================================
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
