@@ -14,7 +14,7 @@ library(mFilter)
 
 #===============================================#
 #             Carga de dataset
-#===============================================#
+#===============================================# 
 #Serie Temporal
 Souvenir <- read.csv("https://raw.githubusercontent.com/mandyhpnguyen/MS-Data-Analytics-Datasets/main/Time%20Series/SouvenirSales.csv")
 Souvenir <- Souvenir[, -c(3, 4)]
@@ -36,3 +36,27 @@ plot(Souvenir.ts / 1000, ylim = c(0, 120),
 #===============================================#
 #             Análisis de la serie
 #===============================================#
+
+#======= 1. Análisis de tendencia y periodicidad ========#
+     
+plot(aggregate(Souvenir.ts),
+     main = "Tendencia agregada de ventas de souvenirs",
+     xlab = "Año",
+     ylab = "Suma de ventas totales",
+     col = "#1f77b4",     # color
+     lwd = 2,             # grosor de la linea
+     type = "l",          # tipo de linea (normal)
+     bty = "o")           # caja de gráfico (recuadro)
+
+#lo siguiente que buscamos es ver cómo es la periodicidad,
+#miramos cada año, para ésto revisamos el boxplot por año
+
+#Figura 3
+boxplot(Souvenir.ts ~ cycle(Souvenir.ts),
+        main = "Estacionalidad mensual en ventas de souvenirs",
+        xlab = "Mes",
+        ylab = "Ventas",
+        col = "#ffb347",           # color naranjo suave
+        border = "gray40",         # Bordes del boxplot
+        names = month.abb)         # Etiquetas mensuales "Ene", "Feb", etc.
+
